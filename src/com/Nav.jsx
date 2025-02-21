@@ -4,6 +4,9 @@ import "../styles/main.scss";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const handleTestDriveClick = () => {
+    alert("로그인이 필요한 메뉴입니다");
+  };
 
   return (
     <header className="nav-bar">
@@ -25,6 +28,10 @@ function Nav() {
             <li><Link to="/configurator/sonata">- Sonata N configurator</Link></li>
             <li><Link to="/configurator/tucson">- Tucson N configurator</Link></li>
           </ul>
+
+          <button className="test-drive-btn" onClick={handleTestDriveClick}>
+            시승신청하기
+          </button>
         </nav>
       </div>
 
