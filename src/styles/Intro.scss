@@ -1,0 +1,222 @@
+@use "./main.scss" as *;
+
+.intro-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/img/intro-bg2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+}
+
+#carheader {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 10%;
+}
+
+#carName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+
+  h2 {
+    margin: 0 15px;
+    font-size: 1.4rem;
+    color: lightgray;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+    &.select {
+      font-size: 2.0rem;
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 12px;
+    }
+  }
+}
+
+/* 슬라이드 영역 */
+#slideArea {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+#slide {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+}
+
+.car {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: filter 0.2s ease-in-out;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 800px;  /* 차량 이미지임 ㅇㅇ */
+  }
+}
+
+/* 차량 정보 스타일 */
+#footer {
+  position: absolute;
+  bottom: 90px;
+  width: 70%;
+  text-align: center;
+}
+
+.carInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+  transition: all 0.5s ease-in-out;
+
+  .start-price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .carSpec {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 800px;
+    background: rgba(10, 10, 10, 0.3);
+    padding: 10px 20px;
+    border-radius: 8px;
+    gap: 3px;
+  }
+
+  .carSpec p {
+    flex: 1;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+}
+
+/* 네비게이션 버튼 */
+#arrow {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  button {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 15px;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+//다음페이지 이동버튼
+
+.config-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+}
+
+
+// Configurator 이동 버튼 스타일
+.config-button {
+  width: 120px;
+  height: 45px;
+  background: #ff4800;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  padding: auto;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out; 
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #arrow button {
+    padding: 7px;
+    font-size: 1.5rem;
+  }
+
+  .start-price {
+    font-size: 1.7rem !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  #carName h2 {
+    margin: 20px 10px;
+    font-size: 1rem;
+
+    &.select {
+      font-size: 1.6rem;
+    }
+  }
+  .carSpec {
+    width: 125% !important; 
+  }
+  
+  .carSpec p {
+    font-size: 0.9rem !important;
+  }
+}
+
+
+@keyframes glowEffect {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 72, 0, 0.7), 0 0 25px rgba(255, 165, 0, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+  }
+}
+.start-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  animation: glowEffect 1.6s infinite alternate ease-in-out;
+}
