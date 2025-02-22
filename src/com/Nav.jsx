@@ -4,8 +4,13 @@ import "../styles/main.scss";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   const handleTestDriveClick = () => {
     alert("로그인이 필요한 메뉴입니다");
+  };
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false); // 사이드 메뉴 닫기
   };
 
   return (
@@ -19,6 +24,10 @@ function Nav() {
 
         {/* 사이드 메뉴 */}
         <nav className={`side-menu ${menuOpen ? "open" : ""}`}>
+          <button className="close-btn" onClick={handleCloseMenu}>
+            ☒
+          </button>
+
           <ul>
             <li><Link to="/">❏ Home</Link></li>
             <li><Link to="/intro">❏ Introduce N</Link></li>
@@ -40,7 +49,7 @@ function Nav() {
         <img src={`${import.meta.env.BASE_URL}img/logo2.svg`} alt="N Line" />
       </Link>
 
-      {/* 프로필 아이콘 */}
+      {/* 로그인창 링크, 로고 */}
       <Link to="/login" className="login-icon">
         <img src={`${import.meta.env.BASE_URL}img/login.png`} alt="login" />
       </Link>
