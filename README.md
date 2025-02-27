@@ -1,10 +1,7 @@
-# React + Vite
+# 현대자동차 Hyundai N 라인 프로젝트 제작
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# nline
-# nline
+## Features
+- React + Vite , SCSS 
+- Configurator 구현
+- 기존 사이트의 복잡함을 느껴, 심플하고 친절하게 구현
+  참조 : https://www.hyundai-n.com/
