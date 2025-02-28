@@ -2,5 +2,5 @@
 (참조 : https://www.hyundai-n.com/)
 ## Features
 - 개발환경 : React + Vite , SCSS 
-- Carousel 기능을 응용한 Configurator 구현
-- 기존 사이트의 복잡함을 느껴, 심플하고 사용하기 편하게 제작
+- Carousel 기능을 응용한 Configurator, Car Introduce page 구현
+- 기존 사이트의 복잡함을 느껴, 정보를 줄이고 심플하고 사용하기 편하게 제작
